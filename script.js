@@ -16,7 +16,7 @@ $(() => {
             valor: 1,
             medida: 'unidade(s)'
         },
-        descricao: 'Maça'
+        descricao: 'Maçã'
     });
 
     alimentosRefeicao.push({

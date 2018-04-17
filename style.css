@@ -1,0 +1,76 @@
+.tela {
+    margin: 0;
+    background-color: antiquewhite;
+    text-align: center;
+}
+.refeicoes {
+    margin: 1.5vw;
+    background-color: transparent;
+    font-size: 6vmin;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.ingestao {
+    display: inline-block;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1.5vw;
+    width: 97vw;
+    background-color: linen;
+}
+.ingestao__ingerido {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.ingestao__restante {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.ingestao__descricao {
+    padding: 5px;
+    background-color: #fa807294;
+    color: white;
+    border-radius: 5px;
+}
+.ingestao__valor {
+    height: 8vmin;
+    line-height: 8vmin;
+    font-size: 5vmin;
+    width: 3rem;
+    text-align: center;
+    border: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    outline: none;
+    background-color: transparent;
+}
+.ingestao__medida {
+    padding-top: 5px;
+    font-size: 3vmin;
+}
+.ingestao__valor-restante {
+    height: 8vmin;
+    line-height: 8vmin;
+    font-size: 5vmin;
+    width: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.ingestao__medida-restante {
+    padding-top: 5px;
+    font-size: 3vmin;
+}

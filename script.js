@@ -207,7 +207,11 @@ $(() => {
                 let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
                 $('.ingestao__valor-restante').each((indice, elemento) => {
                     let alimento = alimentosRefeicao[indice];
-                    $(elemento).text(medidaRestanteParaIngerir(alimento, kcalRefeicaoRestantes));
+                    let medidaRestante = medidaRestanteParaIngerir(alimento, kcalRefeicaoRestantes);
+                    if (isNaN(medidaRestante)) {
+                        medidaRestante = '';
+                    }
+                    $(elemento).text(medidaRestante);
                 });            
             });
             

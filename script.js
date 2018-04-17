@@ -2,6 +2,60 @@ $(() => {
     let alimentosRefeicao = [];
 
     alimentosRefeicao.push({
+        kcal: 105,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Banana'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 72,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Maça'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 62,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Laranja'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 113,
+        porcao: {
+            valor: 1,
+            medida: 'copo(s) de 200ml'
+        },
+        descricao: 'Leite zero lactose integral'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 74,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Manteiga com sal Cotochés'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 75,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Manteiga com sal Porto Alegre'
+    });
+
+    alimentosRefeicao.push({
         kcal: 136,
         porcao: {
             valor: 6,
@@ -62,6 +116,42 @@ $(() => {
             medida: 'colher(es) de sopa'
         },
         descricao: 'Feijão'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 57,
+        porcao: {
+            valor: 2.5,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Chuchu cozido'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 40,
+        porcao: {
+            valor: 1.5,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Jiló cozido'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 80,
+        porcao: {
+            valor: 4,
+            medida: 'fatia(s)'
+        },
+        descricao: 'Tomate'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 72,
+        porcao: {
+            valor: 6,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Repolho cru ou cozido'
     });
 
     function caloriasPorMedida(alimento) {

@@ -61,7 +61,7 @@ $(() => {
             valor: 6,
             medida: 'unidade(s)'
         },
-        descricao: 'Biscoido Cream Cracker Richester'
+        descricao: 'Biscoito Cream Cracker Richester'
     });
 
     alimentosRefeicao.push({
@@ -70,7 +70,7 @@ $(() => {
             valor: 6,
             medida: 'unidade(s)'
         },
-        descricao: 'Biscoido Cream Cracker Aymoré'
+        descricao: 'Biscoito Cream Cracker Aymoré'
     });
 
     alimentosRefeicao.push({

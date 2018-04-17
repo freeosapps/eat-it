@@ -22,6 +22,7 @@
     margin: 1.5vw;
     width: 97vw;
     background-color: linen;
+    vertical-align: middle;
 }
 .ingestao__ingerido {
     width: 50%;
@@ -44,6 +45,7 @@
     background-color: #fa807294;
     color: white;
     border-radius: 5px;
+    font-size: 5vmin;
 }
 .ingestao__valor {
     height: 8vmin;
@@ -74,4 +76,10 @@
 .ingestao__medida-restante {
     padding-top: 5px;
     font-size: 3vmin;
+}
+
+@media (min-width: 480px) {
+    .ingestao {
+        width: 47vw;
+    }
 }

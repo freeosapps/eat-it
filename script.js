@@ -213,7 +213,24 @@ $(() => {
                     });
                     kcalIngeridas += quantidade * caloriasPorMedida(alimento);
                 });
-                $('.rodape').text(`Você ingeriu ${Math.floor(kcalIngeridas * 100 / kcalRefeicao)}% das calorias da refeição`);
+                
+                let valorPorcentagemIngerida = Math.floor(kcalIngeridas * 100 / kcalRefeicao);
+                
+                let porcentagemIngerida = $('<span>')
+                .addClass('porcentagem-ingerida')                
+                .append(`${valorPorcentagemIngerida}%`);
+                
+                $('.rodape')
+                .empty()
+                .append('Você ingeriu ')
+                .append(porcentagemIngerida)
+                .append(' das calorias da refeição');
+
+                if (valorPorcentagemIngerida > 100) {
+                    porcentagemIngerida
+                    .addClass('porcentagem-ingerida_excedida');
+                }
+
                 let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
                 $('.ingestao__restante').each(function(indice, elemento) {
                     let alimento = alimentosRefeicao[indice];

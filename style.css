@@ -44,6 +44,15 @@
     margin-top: 22vmin;
     margin-bottom: 22vmin;
 }
+.porcentagem-ingerida {
+    background-color: darkseagreen;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+.porcentagem-ingerida_excedida {
+    background-color: lightcoral;
+}
 .ingestao {
     display: inline-block;
     box-shadow: 1px 1px 1px 1px lightgray;
@@ -76,7 +85,7 @@
     font-size: 3vmin;
 }
 .ingestao__icone-restante {
-    color: lightgreen;
+    color: darkseagreen;
 }
 .ingestao__icone-restante_acabou {
     color: lightcoral;

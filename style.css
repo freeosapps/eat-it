@@ -6,10 +6,10 @@
 }
 .refeicoes {
     margin: 1.5vw;
-    background-color: linen;
-    font-size: 6vmin;
+    background-color: white;
     outline: none;
     padding: 5px;
+    border: none;
     border-radius: 5px;
 }
 .ingestao {
@@ -25,7 +25,7 @@
     vertical-align: middle;
 }
 .ingestao__ingerido {
-    width: 50%;
+    width: 100%;
     display: inline-block;
     text-align: center;
     padding: 10px;
@@ -33,12 +33,14 @@
     vertical-align: middle;
 }
 .ingestao__restante {
-    width: 50%;
+    width: 100%;
     display: inline-block;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
     vertical-align: middle;
+    font-size: 3vmin;
+    color: red;
 }
 .ingestao__descricao {
     padding: 5px;
@@ -53,29 +55,20 @@
     font-size: 5vmin;
     width: 3rem;
     text-align: center;
-    border: none;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
     outline: none;
-    background-color: transparent;
+    background-color: white;
+    border: none;
+    border-radius: 5px;    
 }
 .ingestao__medida {
-    padding-top: 5px;
-    font-size: 3vmin;
+
 }
 .ingestao__valor-restante {
-    height: 8vmin;
-    line-height: 8vmin;
-    font-size: 5vmin;
-    width: 3rem;
-    margin: 0 auto;
-    text-align: center;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
+    height: 3vmin;
+    line-height: 3vmin;
 }
 .ingestao__medida-restante {
-    padding-top: 5px;
-    font-size: 3vmin;
+    
 }
 
 @media (min-width: 480px) {

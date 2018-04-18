@@ -193,9 +193,15 @@ $(() => {
             .append(alimento.descricao);
 
             let valor = $('<input>')
-            .addClass('ingestao__valor')
+            .prop('placeholder', '0')
+            .bind('blur', function() {
+                $(this).prop('placeholder', '0')
+            })
+            .bind('focus', function() {
+                $(this).prop('placeholder', '')
+            })
+            .addClass('ingestao__valor')            
             .prop('type', 'text')
-            .val('0')
             .bind('keyup', () => {
                 let ingestoes = [];
                 $('.ingestao__valor').each((indice, elemento) => {
@@ -205,41 +211,32 @@ $(() => {
                     });
                 });
                 let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
-                $('.ingestao__valor-restante').each((indice, elemento) => {
+                $('.ingestao__restante').each(function(indice, elemento) {
                     let alimento = alimentosRefeicao[indice];
                     let medidaRestante = medidaRestanteParaIngerir(alimento, kcalRefeicaoRestantes);
-                    if (isNaN(medidaRestante)) {
-                        medidaRestante = '';
+                    if (!isNaN(medidaRestante)) {
+                        if (medidaRestante < 1) {
+                            $(elemento).text('Não pode ingerir mais nada');
+                        } else {
+                            $(elemento).text(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
+                        }
                     }
-                    $(elemento).text(medidaRestante);
                 });            
             });
             
-            let medida = $('<div>')
+            let medida = $('<span>')
             .addClass('ingestao__medida')
-            .append(alimento.porcao.medida)
             .append(' ')
-            .append('ingerida(s)');
+            .append(alimento.porcao.medida);
 
             let ingerido = $('<div>')
             .addClass('ingestao__ingerido')
             .append(valor)
             .append(medida);
 
-            let valorRestante = $('<div>')
-            .addClass('ingestao__valor-restante')
-            .append(medidaRestanteParaIngerir(alimento, kcalRefeicao));
-
-            let medidaRestante = $('<div>')
-            .addClass('ingestao__medida-restante')
-            .append(alimento.porcao.medida)        
-            .append(' ')
-            .append('restante(s)');
-
             let restante = $('<div>')
             .addClass('ingestao__restante')
-            .append(valorRestante)
-            .append(medidaRestante);
+            .append(`Ainda pode ingerir mais ${medidaRestanteParaIngerir(alimento, kcalRefeicao)} ${alimento.porcao.medida}`);
 
             let ingestao = $('<div>')
             .addClass('ingestao')

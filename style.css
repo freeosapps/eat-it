@@ -7,7 +7,16 @@
 }
 .titulo {
     font-size: 4.5vmin;
-    padding: 10px 1.5vw;
+    height: 16vmin;
+    line-height: 16vmin;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #c98383;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    border-radius: 5px;
+    color: white;
 }
 .refeicoes {
     font-size: 4.5vmin;
@@ -17,6 +26,9 @@
     border: none;
     border-radius: 5px;
     color: dimgray;
+}
+.ingestoes {
+    margin-top: 18vmin;
 }
 .ingestao {
     display: inline-block;

@@ -216,9 +216,27 @@ $(() => {
                     let medidaRestante = medidaRestanteParaIngerir(alimento, kcalRefeicaoRestantes);
                     if (!isNaN(medidaRestante)) {
                         if (medidaRestante < 1) {
-                            $(elemento).text('Não pode ingerir mais nada');
+                            let iconeRestante = $('<i>')
+                            .addClass('ingestao__icone-restante_acabou')
+                            .addClass('fa')
+                            .addClass('fa-times-circle');
+
+                            $(elemento)
+                            .empty()
+                            .append(iconeRestante)
+                            .append(' ')
+                            .append('Não pode ingerir mais nada');
                         } else {
-                            $(elemento).text(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
+                            let iconeRestante = $('<i>')
+                            .addClass('ingestao__icone-restante')
+                            .addClass('fa')
+                            .addClass('fa-check-circle');
+
+                            $(elemento)
+                            .empty()
+                            .append(iconeRestante)
+                            .append(' ')
+                            .append(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
                         }
                     }
                 });            
@@ -234,8 +252,15 @@ $(() => {
             .append(valor)
             .append(medida);
 
+            let iconeRestante = $('<i>')
+            .addClass('ingestao__icone-restante')
+            .addClass('fa')
+            .addClass('fa-check-circle');
+
             let restante = $('<div>')
             .addClass('ingestao__restante')
+            .append(iconeRestante)
+            .append(' ')
             .append(`Ainda pode ingerir mais ${medidaRestanteParaIngerir(alimento, kcalRefeicao)} ${alimento.porcao.medida}`);
 
             let ingestao = $('<div>')

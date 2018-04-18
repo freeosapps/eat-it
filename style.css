@@ -22,7 +22,7 @@
     display: inline-block;
     box-shadow: 1px 1px 1px 1px lightgray;
     border-radius: 5px;
-    padding: 10px;
+    padding: 1vmin;
     box-sizing: border-box;
     text-align: center;
     margin: 1.5vw;
@@ -34,7 +34,7 @@
     width: 100%;
     display: inline-block;
     text-align: center;
-    padding: 10px;
+    padding: 5vmin;
     box-sizing: border-box;
     vertical-align: middle;
     line-height: 8vmin;

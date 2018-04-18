@@ -225,7 +225,7 @@ $(() => {
                             .empty()
                             .append(iconeRestante)
                             .append('&nbsp;')
-                            .append('Não pode ingerir mais nada');
+                            .append('Não pode ingerir mais');
                         } else {
                             let iconeRestante = $('<i>')
                             .addClass('ingestao__icone-restante')
@@ -265,7 +265,7 @@ $(() => {
                 restante
                 .append(iconeRestante)
                 .append('&nbsp;')
-                .append('Não pode ingerir mais nada');
+                .append('Não pode ingerir mais');
             } else {
                 let iconeRestante = $('<i>')
                 .addClass('ingestao__icone-restante')

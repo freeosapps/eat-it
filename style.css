@@ -24,6 +24,7 @@
     padding: 5px;
     border-width: 1px;
     border-style: solid;
+    border-color: dimgray;
     border-radius: 5px;
     color: dimgray;
 }
@@ -87,6 +88,7 @@
     color: dimgray;
     border-width: 1px;
     border-style: solid;
+    border-color: dimgray;
 }
 
 @media (min-width: 480px) {

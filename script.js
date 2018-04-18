@@ -224,7 +224,7 @@ $(() => {
                             $(elemento)
                             .empty()
                             .append(iconeRestante)
-                            .append(' ')
+                            .append('&nbsp;')
                             .append('Não pode ingerir mais nada');
                         } else {
                             let iconeRestante = $('<i>')
@@ -235,7 +235,7 @@ $(() => {
                             $(elemento)
                             .empty()
                             .append(iconeRestante)
-                            .append(' ')
+                            .append('&nbsp;')
                             .append(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
                         }
                     }
@@ -260,7 +260,7 @@ $(() => {
             let restante = $('<div>')
             .addClass('ingestao__restante')
             .append(iconeRestante)
-            .append(' ')
+            .append('&nbsp;')
             .append(`Ainda pode ingerir mais ${medidaRestanteParaIngerir(alimento, kcalRefeicao)} ${alimento.porcao.medida}`);
 
             let ingestao = $('<div>')

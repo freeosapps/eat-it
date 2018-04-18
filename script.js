@@ -204,12 +204,16 @@ $(() => {
             .prop('type', 'text')
             .bind('keyup', () => {
                 let ingestoes = [];
+                let kcalIngeridas = 0;
                 $('.ingestao__valor').each((indice, elemento) => {
                     let alimento = alimentosRefeicao[indice];
+                    let quantidade = $(elemento).val();
                     ingestoes.push({
-                        quantidade: $(elemento).val(), alimento: alimento
+                        quantidade: quantidade, alimento: alimento
                     });
+                    kcalIngeridas += quantidade * caloriasPorMedida(alimento);
                 });
+                $('.rodape').text(`Você ingeriu ${Math.floor(kcalIngeridas * 100 / kcalRefeicao)}% das calorias da refeição`);
                 let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
                 $('.ingestao__restante').each(function(indice, elemento) {
                     let alimento = alimentosRefeicao[indice];

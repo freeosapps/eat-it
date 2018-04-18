@@ -3,9 +3,9 @@
     background-color: antiquewhite;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: dimgray
+    color: dimgray;
 }
-.titulo {
+.cabecalho {
     font-size: 5vmin;
     height: 20vmin;
     line-height: 20vmin;
@@ -16,6 +16,18 @@
     box-sizing: border-box;
     box-shadow: 1px 1px 1px 1px lightgrey;
     border-radius: 0 0 5px 5px;
+}
+.rodape {
+    font-size: 5vmin;
+    height: 20vmin;
+    line-height: 20vmin;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background-color: linen;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    border-radius: 5px 5px 0 0;
 }
 .refeicoes {
     font-size: 4.5vmin;
@@ -30,6 +42,7 @@
 }
 .ingestoes {
     margin-top: 22vmin;
+    margin-bottom: 22vmin;
 }
 .ingestao {
     display: inline-block;

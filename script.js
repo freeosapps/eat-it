@@ -92,6 +92,15 @@ $(() => {
     });
 
     alimentosRefeicao.push({
+        kcal: 328,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Pão pizza'
+    });
+
+    alimentosRefeicao.push({
         kcal: 24.2,
         porcao: {
             valor: 1,

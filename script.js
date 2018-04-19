@@ -2,6 +2,33 @@ $(() => {
     let alimentosRefeicao = [];
 
     alimentosRefeicao.push({
+        kcal: 100,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Açúcar granulado'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 56,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Açúcar mascavo'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 125,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Açúcar refinado'
+    });
+
+    alimentosRefeicao.push({
         kcal: 105,
         porcao: {
             valor: 1,

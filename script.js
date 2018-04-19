@@ -119,6 +119,15 @@ $(() => {
     });
 
     alimentosRefeicao.push({
+        kcal: 46,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Cebola'
+    });
+
+    alimentosRefeicao.push({
         kcal: 57,
         porcao: {
             valor: 2.5,

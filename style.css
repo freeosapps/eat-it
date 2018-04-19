@@ -14,7 +14,7 @@
     top: 0;
     background-color: linen;
     box-sizing: border-box;
-    box-shadow: 1px 1px 1px 1px lightgrey;
+    box-shadow: 2px 2px 2px 2px lightgrey;
     border-radius: 0 0 5px 5px;
 }
 .rodape {
@@ -23,10 +23,10 @@
     line-height: 20vmin;
     width: 100vw;
     position: fixed;
-    bottom: 0;
+    bottom: 4px;
     background-color: linen;
     box-sizing: border-box;
-    box-shadow: 1px 1px 1px 1px lightgrey;
+    box-shadow: 2px 2px 2px 2px lightgrey;
     border-radius: 5px 5px 0 0;
 }
 .refeicoes {

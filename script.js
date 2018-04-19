@@ -29,6 +29,24 @@ $(() => {
     });
 
     alimentosRefeicao.push({
+        kcal: 41,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Arroz branco'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 24.2,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Arroz integral'
+    });
+
+    alimentosRefeicao.push({
         kcal: 105,
         porcao: {
             valor: 1,
@@ -38,12 +56,57 @@ $(() => {
     });
 
     alimentosRefeicao.push({
-        kcal: 72,
+        kcal: 130,
+        porcao: {
+            valor: 6,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Biscoito Cream Cracker Aymoré'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 136,
+        porcao: {
+            valor: 6,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Biscoito Cream Cracker Richester'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 46,
         porcao: {
             valor: 1,
             medida: 'unidade(s)'
         },
-        descricao: 'Maçã'
+        descricao: 'Cebola'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 57,
+        porcao: {
+            valor: 2.5,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Chuchu cozido'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 58,
+        porcao: {
+            valor: 1,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Feijão'
+    });
+
+    alimentosRefeicao.push({
+        kcal: 40,
+        porcao: {
+            valor: 1.5,
+            medida: 'colher(es) de sopa'
+        },
+        descricao: 'Jiló cozido'
     });
 
     alimentosRefeicao.push({
@@ -65,6 +128,15 @@ $(() => {
     });
 
     alimentosRefeicao.push({
+        kcal: 72,
+        porcao: {
+            valor: 1,
+            medida: 'unidade(s)'
+        },
+        descricao: 'Maçã'
+    });
+
+    alimentosRefeicao.push({
         kcal: 74,
         porcao: {
             valor: 1,
@@ -80,24 +152,6 @@ $(() => {
             medida: 'colher(es) de sopa'
         },
         descricao: 'Manteiga com sal Porto Alegre'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 136,
-        porcao: {
-            valor: 6,
-            medida: 'unidade(s)'
-        },
-        descricao: 'Biscoito Cream Cracker Richester'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 130,
-        porcao: {
-            valor: 6,
-            medida: 'unidade(s)'
-        },
-        descricao: 'Biscoito Cream Cracker Aymoré'
     });
 
     alimentosRefeicao.push({
@@ -128,57 +182,12 @@ $(() => {
     });
 
     alimentosRefeicao.push({
-        kcal: 24.2,
+        kcal: 72,
         porcao: {
-            valor: 1,
+            valor: 6,
             medida: 'colher(es) de sopa'
         },
-        descricao: 'Arroz integral'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 41,
-        porcao: {
-            valor: 1,
-            medida: 'colher(es) de sopa'
-        },
-        descricao: 'Arroz branco'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 58,
-        porcao: {
-            valor: 1,
-            medida: 'colher(es) de sopa'
-        },
-        descricao: 'Feijão'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 46,
-        porcao: {
-            valor: 1,
-            medida: 'unidade(s)'
-        },
-        descricao: 'Cebola'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 57,
-        porcao: {
-            valor: 2.5,
-            medida: 'colher(es) de sopa'
-        },
-        descricao: 'Chuchu cozido'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 40,
-        porcao: {
-            valor: 1.5,
-            medida: 'colher(es) de sopa'
-        },
-        descricao: 'Jiló cozido'
+        descricao: 'Repolho cru ou cozido'
     });
 
     alimentosRefeicao.push({
@@ -188,15 +197,6 @@ $(() => {
             medida: 'fatia(s)'
         },
         descricao: 'Tomate'
-    });
-
-    alimentosRefeicao.push({
-        kcal: 72,
-        porcao: {
-            valor: 6,
-            medida: 'colher(es) de sopa'
-        },
-        descricao: 'Repolho cru ou cozido'
     });
 
     function caloriasPorMedida(alimento) {

@@ -316,6 +316,16 @@ $(() => {
             
             $('.ingestoes')
             .append(ingestao);
+
+            let porcentagemIngerida = $('<span>')
+            .addClass('porcentagem-ingerida')                
+            .append(`0%`);
+
+            $('.rodape')
+            .empty()
+            .append('Você ingeriu ')
+            .append(porcentagemIngerida)
+            .append(' das calorias da refeição');
         });
     }
 

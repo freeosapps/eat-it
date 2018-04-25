@@ -19,6 +19,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 10px, white 10px, white 20px ), repeating-linear-gradient(45deg, white, white 10px, linen 10px, linen 20px );
 }
 .rodape {
     font-size: 5vmin;
@@ -34,6 +35,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 10px, white 10px, white 20px ), repeating-linear-gradient(45deg, white, white 10px, linen 10px, linen 20px );
 }
 .refeicoes {
     font-size: 4.5vmin;

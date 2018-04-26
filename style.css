@@ -67,7 +67,6 @@
     display: inline-block;
     box-shadow: 1px 1px 1px 1px lightgray;
     border-radius: 5px;
-    padding: 1vmin;
     box-sizing: border-box;
     text-align: center;
     margin: 2vw;
@@ -77,6 +76,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 1px,oldlace 1px, oldlace 2px ), repeating-linear-gradient(45deg, white, white 1px, oldlace 1px, oldlace 2px );
 }
 .ingestao__ingerido {
     width: 100%;
@@ -105,10 +105,13 @@
 }
 .ingestao__descricao {
     padding: 5px;
-    background-color: #f9aea2;
     color: white;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     font-size: 4vmin;
+    background-color: #f9aea2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
 }
 .ingestao__valor {
     height: 8vmin;

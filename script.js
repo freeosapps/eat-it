@@ -299,9 +299,25 @@ $(() => {
                 let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
                 $('.ingestao__restante').each(function(indice, elemento) {
                     let alimento = alimentosRefeicao[indice];
+                    
                     let medidaRestante = medidaRestanteParaIngerir(alimento, kcalRefeicaoRestantes);
+
+                    let valorIngerido = parseInt($(this).parent().find('.ingestao__valor').val(), 10);
+                    
+                    if (!valorIngerido) {
+                        valorIngerido = 0;
+                    }
+
+                    let maximoPermitido = valorIngerido;
+
+                    if (medidaRestante > 0) {
+                        maximoPermitido += medidaRestante;
+                    }
+
+                    let ingeridoAMais = valorIngerido - maximoPermitido - medidaRestante;
+
                     if (!isNaN(medidaRestante)) {
-                        if (medidaRestante < 1) {
+                        if (medidaRestante < 0) {
                             let iconeRestante = $('<i>')
                             .addClass('ingestao__icone-restante_acabou')
                             .addClass('fa')
@@ -310,19 +326,40 @@ $(() => {
                             $(elemento)
                             .empty()
                             .append(iconeRestante)
-                            .append('&nbsp;')
-                            .append('Não pode ingerir mais');
-                        } else {
-                            let iconeRestante = $('<i>')
-                            .addClass('ingestao__icone-restante')
-                            .addClass('fa')
-                            .addClass('fa-check-circle');
+                            .append('&nbsp;');                            
 
-                            $(elemento)
-                            .empty()
-                            .append(iconeRestante)
-                            .append('&nbsp;')
-                            .append(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
+                            if (valorIngerido - ingeridoAMais > 0) {
+                                $(elemento)
+                                .append(`Você ingeriu ${ingeridoAMais} ${alimento.porcao.medida} a mais`);
+                            } else {
+                                $(elemento)
+                                .append(`Não pode ingerir mais`);
+                            }
+
+                        } else {
+                            if (maximoPermitido > 0) {
+                                let iconeRestante = $('<i>')
+                                .addClass('ingestao__icone-restante')
+                                .addClass('fa')
+                                .addClass('fa-check-circle');
+
+                                $(elemento)
+                                .empty()
+                                .append(iconeRestante)
+                                .append('&nbsp;')
+                                .append(`No máximo ${maximoPermitido} ${alimento.porcao.medida}`);
+                            } else {
+                                let iconeRestante = $('<i>')
+                                .addClass('ingestao__icone-restante_acabou')
+                                .addClass('fa')
+                                .addClass('fa-times-circle');
+    
+                                $(elemento)
+                                .empty()
+                                .append(iconeRestante)
+                                .append('&nbsp;')
+                                .append(`Não pode ingerir mais`);                                
+                            }
                         }
                     }
                 });            
@@ -342,7 +379,22 @@ $(() => {
             .addClass('ingestao__restante');
 
             let medidaRestante = medidaRestanteParaIngerir(alimento, kcalRefeicao);
-            if (medidaRestante < 1) {
+            
+            let valorIngerido = parseInt($(this).parent().find('.ingestao__valor').val(), 10);
+                    
+            if (!valorIngerido) {
+                valorIngerido = 0;
+            }
+
+            let maximoPermitido = valorIngerido;
+
+            if (medidaRestante > 0) {
+                maximoPermitido += medidaRestante;
+            }
+
+            let ingeridoAMais = valorIngerido - maximoPermitido - medidaRestante;
+
+            if (medidaRestante < 0) {
                 let iconeRestante = $('<i>')
                 .addClass('ingestao__icone-restante_acabou')
                 .addClass('fa')
@@ -350,18 +402,39 @@ $(() => {
 
                 restante
                 .append(iconeRestante)
-                .append('&nbsp;')
-                .append('Não pode ingerir mais');
-            } else {
-                let iconeRestante = $('<i>')
-                .addClass('ingestao__icone-restante')
-                .addClass('fa')
-                .addClass('fa-check-circle');
+                .append('&nbsp;');                          
 
-                restante
-                .append(iconeRestante)
-                .append('&nbsp;')
-                .append(`Ainda pode ingerir mais ${medidaRestante} ${alimento.porcao.medida}`);
+                if (valorIngerido - ingeridoAMais  > 0) {
+                    $(elemento)
+                    .append(`Você ingeriu ${ingeridoAMais} ${alimento.porcao.medida} a mais`);
+                } else {
+                    $(elemento)
+                    .append(`Não pode ingerir mais`);
+                }
+
+            } else {
+                if (maximoPermitido > 0) {
+                    let iconeRestante = $('<i>')
+                    .addClass('ingestao__icone-restante')
+                    .addClass('fa')
+                    .addClass('fa-check-circle');
+
+                    restante
+                    .append(iconeRestante)
+                    .append('&nbsp;')
+                    .append(`No máximo ${maximoPermitido} ${alimento.porcao.medida}`);
+                } else {
+                    let iconeRestante = $('<i>')
+                    .addClass('ingestao__icone-restante_acabou')
+                    .addClass('fa')
+                    .addClass('fa-times-circle');
+
+                    $(elemento)
+                    .empty()
+                    .append(iconeRestante)
+                    .append('&nbsp;')
+                    .append(`Não pode ingerir mais`);                                
+                }
             }
 
             let ingestao = $('<div>')

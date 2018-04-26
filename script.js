@@ -104,7 +104,7 @@ $(() => {
         kcal: 128,
         porcao: {
             valor: 1,
-            medida: '1 unidade(s)'
+            medida: 'unidade(s)'
         },
         descricao: 'Filé de peito de frango'
     });
@@ -113,7 +113,7 @@ $(() => {
         kcal: 159,
         porcao: {
             valor: 1,
-            medida: '1 unidade(s)'
+            medida: 'unidade(s)'
         },
         descricao: 'Filé de peito de frango grelhado'
     });

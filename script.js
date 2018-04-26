@@ -279,15 +279,17 @@ $(() => {
                 
                 let valorPorcentagemIngerida = Math.floor(kcalIngeridas * 100 / kcalRefeicao);
                 
-                let porcentagemIngerida = $('<span>')
-                .addClass('porcentagem-ingerida')                
-                .append(`${valorPorcentagemIngerida}%`);
-                
-                $('.rodape')
-                .empty()
-                .append('Você ingeriu ')
-                .append(porcentagemIngerida)
-                .append(' das calorias da refeição');
+                if (!isNaN(valorPorcentagemIngerida)) {    
+                    let porcentagemIngerida = $('<span>')
+                    .addClass('porcentagem-ingerida')                
+                    .append(`${valorPorcentagemIngerida}%`);
+                    
+                    $('.rodape')
+                    .empty()
+                    .append('Você ingeriu ')
+                    .append(porcentagemIngerida)
+                    .append(' das calorias da refeição');
+                }
 
                 if (valorPorcentagemIngerida > 100) {
                     porcentagemIngerida

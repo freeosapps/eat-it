@@ -103,6 +103,7 @@
     box-sizing: border-box;
     font-size: 3vw;
     text-align: left;
+    padding: 20px;
 }
 .ingestao__valor {
     margin: 0 10px;

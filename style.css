@@ -80,7 +80,7 @@
     border-color: lightgray;
 }
 .ingestao__alimento {
-    height: 75%;
+    height: 70%;
     display: flex;
 }
 .ingestao__descricao {
@@ -133,7 +133,7 @@
     border-top-color: lightgray;    
     border-radius: 0 0 5px 5px;
     background-color: linen;
-    height: 25%;
+    height: 30%;
 }
 .ingestao__medida {
     vertical-align: middle;

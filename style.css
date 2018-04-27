@@ -145,7 +145,7 @@
     color: lightcoral;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 1024px) {
     .ingestao {
         width: 46%;
     }

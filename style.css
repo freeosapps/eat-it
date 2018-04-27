@@ -72,7 +72,7 @@
     text-align: center;
     margin: 2% 2vw;
     width: 96vw;
-    height: 15%;
+    height: 20%;
     background-color: white;
     vertical-align: middle;
     border-width: 1px;
@@ -93,7 +93,7 @@
     border-radius: 5px 0 0 0;
     font-size: 4vmin;    
     box-sizing: border-box;
-    color: #a75e5e;
+    color: #a96363;
 }
 .ingestao__ingerido {
     display: flex;

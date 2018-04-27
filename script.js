@@ -359,7 +359,7 @@ $(() => {
                 kcalIngeridas += quantidade * caloriasPorMedida(alimento);
             });
             
-            let valorPorcentagemIngerida = Math.floor(kcalIngeridas * 100 / kcalRefeicao);
+            let valorPorcentagemIngerida = Math.ceil(kcalIngeridas * 100 / kcalRefeicao);
             
             let porcentagemIngerida = $('<span>')
             .addClass('porcentagem-ingerida');

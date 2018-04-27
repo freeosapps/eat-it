@@ -107,9 +107,10 @@
 }
 .ingestao__valor {
     margin: 0 10px;
-    height: 5vh;
+    height: 4vh;
     font-size: 3vh;
     width: 15vmin;
+    max-width: 30%;
     text-align: center;
     outline: none;
     background-color: white;
@@ -155,6 +156,7 @@
     }
     .ingestao__valor {
         font-size: 3vw;
+        height: 4vw;
     }
     .ingestao__ingerido {
         font-size: 2vw;

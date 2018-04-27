@@ -38,7 +38,7 @@
 }
 
 .refeicoes {
-    font-size: 4.5vw;
+    font-size: 4vw;
     background-color: white;
     outline: none;
     padding: 5px;
@@ -106,7 +106,7 @@
 }
 .ingestao__valor {
     margin: 0 10px;
-    height: 8vmin;
+    height: 8vh;
     font-size: 5vw;
     width: 15vmin;
     text-align: center;
@@ -160,5 +160,14 @@
     }
     .ingestao__restante {
         font-size: 2vw;
+    }
+    .cabecalho {
+        font-size: 3vw;
+    }
+    .rodape {
+        font-size: 3vw;
+    }
+    .refeicoes {
+        font-size: 3vw;
     }
 }

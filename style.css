@@ -64,57 +64,50 @@
     background-color: lightcoral;
 }
 .ingestao {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     box-shadow: 1px 1px 1px 1px lightgray;
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
     margin: 2vw;
     width: 96vw;
-    background-color: oldlace;
+    height: 15vh;
+    background-color: white;
     vertical-align: middle;
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
 }
-.ingestao__ingerido {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    padding: 5vmin;
-    box-sizing: border-box;
-    vertical-align: middle;
-    line-height: 8vmin;
-    font-size: 5vmin;
-}
-.ingestao__restante {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    vertical-align: middle;
-    font-size: 3vmin;
-}
-.ingestao__icone-restante {
-    color: darkseagreen;
-}
-.ingestao__icone-restante_acabou {
-    color: lightcoral;
+.ingestao__alimento {
+    height: 75%;
+    display: flex;
+    flex-grow: 3;
 }
 .ingestao__descricao {
-    padding: 5px;
-    color: white;
-    border-radius: 5px 5px 0 0;
-    font-size: 4vmin;
-    background-color: #f9aea2;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px 0 0 0;
+    font-size: 4vmin;    
+    box-sizing: border-box;
+    color: #a75e5e;
+}
+.ingestao__ingerido {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 3vmin;
+    text-align: left;
 }
 .ingestao__valor {
+    margin: 0 10px;
     height: 8vmin;
-    line-height: 8vmin;
     font-size: 5vmin;
     width: 15vmin;
     text-align: center;
@@ -126,6 +119,28 @@
     border-width: 1px;
     border-style: solid;
     border-color: dimgray;
+    vertical-align: middle;
+}
+.ingestao__restante {
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 3vmin;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: lightgray;    
+    border-radius: 0 0 5px 5px;
+    background-color: floralwhite;
+}
+.ingestao__medida {
+    vertical-align: middle;
+}
+.ingestao__icone-restante {
+    color: darkseagreen;
+}
+.ingestao__icone-restante_acabou {
+    color: lightcoral;
 }
 
 @media (min-width: 480px) {

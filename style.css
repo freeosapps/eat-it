@@ -46,7 +46,7 @@
     padding: 5px;
     border-width: 1px;
     border-style: solid;
-    border-color: dimgray;
+    border-color: lightgray;
     border-radius: 5px;
     color: dimgray;
 }
@@ -117,7 +117,7 @@
     color: dimgray;
     border-width: 1px;
     border-style: solid;
-    border-color: dimgray;
+    border-color: lightgray;
     vertical-align: middle;
 }
 .ingestao__restante {

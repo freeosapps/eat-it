@@ -72,8 +72,8 @@
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
-    margin: 2% 2vw;
-    width: 96vw;
+    margin: 2%;
+    width: 96%;
     height: 25%;
     background-color: white;
     vertical-align: middle;
@@ -149,6 +149,6 @@
 
 @media (min-width: 480px) {
     .ingestao {
-        width: 46vw;
+        width: 46%;
     }
 }

@@ -18,7 +18,20 @@
                 </select>
             </label>
         </header>
-        <main class="ingestoes"></main>
+        <main class="ingestoes">
+            <template class="template-ingestao">
+                <div class="ingestao">
+                    <div class="ingestao__alimento">
+                        <div class="ingestao__descricao"></div>
+                        <div class="ingestao__ingerido">
+                            <input class="ingestao__valor" type="number" placeholder="0">
+                            <span class="ingestao__medida"></span>
+                        </div>
+                    </div>
+                    <div class="ingestao__restante"></div>
+                </div>
+            </template>
+        </main>
         <footer class="rodape">Você ingeriu <span class="porcentagem-ingerida">0%</span> das calorias da refeição</footer>
     </body>
 </html>

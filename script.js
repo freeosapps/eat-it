@@ -316,85 +316,18 @@ $(() => {
     function exibirIngestoes() {
         let kcalRefeicao = $('.refeicoes').val();
         alimentosRefeicao.forEach(alimento => {
-            let descricao = $('<div>')
-            .addClass('ingestao__descricao')
-            .append(alimento.descricao);
+            let templateIngestao = $($('.template-ingestao').prop('content'));
 
-            let valor = $('<input>')
-            .prop('placeholder', '0')
-            .bind('blur', function() {
-                $(this).prop('placeholder', '0')
-            })
-            .bind('focus', function() {
-                $(this).prop('placeholder', '')
-            })
-            .addClass('ingestao__valor')            
-            .prop('type', 'text')
-            .bind('keyup', () => {
-                let ingestoes = [];
-                let kcalIngeridas = 0;
-                $('.ingestao__valor').each((indice, elemento) => {
-                    let alimento = alimentosRefeicao[indice];
-                    let quantidade = $(elemento).val();
-                    ingestoes.push({
-                        quantidade: quantidade, alimento: alimento
-                    });
-                    kcalIngeridas += quantidade * caloriasPorMedida(alimento);
-                });
-                
-                let valorPorcentagemIngerida = Math.floor(kcalIngeridas * 100 / kcalRefeicao);
-                
-                if (!isNaN(valorPorcentagemIngerida)) {    
-                    let porcentagemIngerida = $('<span>')
-                    .addClass('porcentagem-ingerida')                
-                    .append(`${valorPorcentagemIngerida}%`);
-                    
-                    $('.rodape')
-                    .empty()
-                    .append('Você ingeriu ')
-                    .append(porcentagemIngerida)
-                    .append(' das calorias da refeição');
-                }
-
-                if (valorPorcentagemIngerida > 100) {
-                    porcentagemIngerida
-                    .addClass('porcentagem-ingerida_excedida');
-                }
-
-                let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
-                $('.ingestao__restante').each(function(indice, elemento) {
-                    let alimento = alimentosRefeicao[indice];                    
-                    atualizarMensagem(elemento, alimento, kcalRefeicaoRestantes);
-                });            
-            });
+            templateIngestao.find('.ingestao__descricao')
+            .text(alimento.descricao);
             
-            let medida = $('<span>')
-            .addClass('ingestao__medida')
-            .append(' ')
-            .append(alimento.porcao.medida);
+            templateIngestao.find('.ingestao__medida')
+            .text(alimento.porcao.medida);
 
-            let ingerido = $('<div>')
-            .addClass('ingestao__ingerido')
-            .append(valor)
-            .append(medida);
-
-            let restante = $('<div>')
-            .addClass('ingestao__restante');
-
-            atualizarMensagem(restante, alimento, kcalRefeicao);
-            
-            let ingestaoAlimento = $('<div>')
-            .addClass('ingestao__alimento')
-            .append(descricao)
-            .append(ingerido);
-
-            let ingestao = $('<div>')
-            .addClass('ingestao')
-            .append(ingestaoAlimento)
-            .append(restante);
-            
+            atualizarMensagem(templateIngestao.find('.ingestao__restante'), alimento, kcalRefeicao);
+                      
             $('.ingestoes')
-            .append(ingestao);
+            .append(document.importNode(templateIngestao[0], true));
 
             let porcentagemIngerida = $('<span>')
             .addClass('porcentagem-ingerida')                
@@ -405,6 +338,53 @@ $(() => {
             .append('Você ingeriu ')
             .append(porcentagemIngerida)
             .append(' das calorias da refeição');
+        });
+
+        $('.ingestao__valor')
+        .bind('blur', function() {
+            $(this).prop('placeholder', '0')
+        })
+        .bind('focus', function() {
+            $(this).prop('placeholder', '')
+        })
+        .bind('keyup', () => {
+            let ingestoes = [];
+            let kcalIngeridas = 0;
+            $('.ingestao__valor').each((indice, elemento) => {
+                let alimento = alimentosRefeicao[indice];
+                let quantidade = $(elemento).val();
+                ingestoes.push({
+                    quantidade: quantidade, alimento: alimento
+                });
+                kcalIngeridas += quantidade * caloriasPorMedida(alimento);
+            });
+            
+            let valorPorcentagemIngerida = Math.floor(kcalIngeridas * 100 / kcalRefeicao);
+            
+            let porcentagemIngerida = $('<span>')
+            .addClass('porcentagem-ingerida');
+            
+            if (!isNaN(valorPorcentagemIngerida)) {    
+                porcentagemIngerida    
+                .append(`${valorPorcentagemIngerida}%`);
+                
+                $('.rodape')
+                .empty()
+                .append('Você ingeriu ')
+                .append(porcentagemIngerida)
+                .append(' das calorias da refeição');
+            }
+
+            if (valorPorcentagemIngerida > 100) {
+                porcentagemIngerida
+                .addClass('porcentagem-ingerida_excedida');
+            }
+
+            let kcalRefeicaoRestantes = kcalDaRefeicaoRestantes(ingestoes, kcalRefeicao);
+            $('.ingestao__restante').each(function(indice, elemento) {
+                let alimento = alimentosRefeicao[indice];                    
+                atualizarMensagem(elemento, alimento, kcalRefeicaoRestantes);
+            });            
         });
     }
 

@@ -53,6 +53,8 @@
 .ingestoes {
     margin-top: 22vmin;
     margin-bottom: 22vmin;
+    display: flex;
+    flex-wrap: wrap;
 }
 .porcentagem-ingerida {
     background-color: darkseagreen;

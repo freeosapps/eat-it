@@ -243,7 +243,7 @@ $(() => {
         return kcalRefeicao - totalDeCaloriasIngeridas(ingestoes);
     }
 
-    $('.refeicoes').bind('change', function() {
+    $('.refeicoes').bind('input', function() {
         $('.ingestoes').empty();
         exibirIngestoes();
     });
@@ -347,7 +347,7 @@ $(() => {
         .bind('focus', function() {
             $(this).prop('placeholder', '')
         })
-        .bind('keyup', () => {
+        .bind('input', () => {
             let ingestoes = [];
             let kcalIngeridas = 0;
             $('.ingestao__valor').each((indice, elemento) => {

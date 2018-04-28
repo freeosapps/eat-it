@@ -8,7 +8,7 @@
           "type": "chrome",
           "request": "launch",
           "name": "Launch Chrome",
-          "file": "${workspaceFolder}/index.html",
+          "file": "${workspaceFolder}/app/index.html",
           "runtimeExecutable": "/usr/bin/google-chrome-stable",
           "runtimeArgs": [
               "--remote-debugging-port=9222",

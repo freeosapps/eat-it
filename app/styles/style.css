@@ -101,7 +101,7 @@
     box-sizing: border-box;
     color: #a96363;
 }
-.ingestao__ingerido {
+.ingestao__quantidade-ingerida {
     display: flex;
     align-items: center;
     width: 50%;
@@ -164,7 +164,7 @@
         font-size: 3vw;
         height: 4vw;
     }
-    .ingestao__ingerido {
+    .ingestao__quantidade-ingerida {
         font-size: 2vw;
     }
     .ingestao__restante {

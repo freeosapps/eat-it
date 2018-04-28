@@ -9,21 +9,20 @@
     </head>
     <body class="tela">
         <header class="cabecalho">
-            <label>Alimentos ingeridos no
-                <select class="refeicoes">
-                    <option value="400">café da manhã</option>
-                    <option value="480">almoço</option>
-                    <option value="320">café da tarde</option>
-                    <option value="400">jantar</option>
-                </select>
-            </label>
+            <span>Alimentos ingeridos no</span>
+            <select class="refeicoes">
+                <option value="400">café da manhã</option>
+                <option value="480">almoço</option>
+                <option value="320">café da tarde</option>
+                <option value="400">jantar</option>
+            </select>
         </header>
         <template class="template-ingestao">
             <div class="ingestao">
                 <div class="ingestao__alimento">
                     <div class="ingestao__descricao"></div>
                     <div class="ingestao__ingerido">
-                        <input class="ingestao__valor" type="number" placeholder="0">
+                        <input class="ingestao__valor" type="number" min="0" placeholder="0">
                         <span class="ingestao__medida"></span>
                     </div>
                 </div>
